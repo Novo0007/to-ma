@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <style>
         body {
-            background-color:  #a6bb51;
+            background-image: url(https://i.pinimg.com/originals/03/4a/e2/034ae28c150863cd742a9a2dd6efcfb3.gif) ;
             font-family: 'Poppins', sans-serif;
             display: flex;
 
@@ -137,5 +137,14 @@
             </div>
         </a>
     </div>
+    <script >
+        const birthdaySong = new Audio("https://firebasestorage.googleapis.com/v0/b/nopeca-106bd.appspot.com/o/musics%2FTimeless%20(with%20Playboi%20Carti).mp3?alt=media&token=1db79562-6b5e-4587-a4ce-2742e3385c47");
+
+const playSongOnClick = () => {
+  birthdaySong.play();
+};
+
+window.addEventListener('click', playSongOnClick);
+    </script>
 </body>
 </html>
