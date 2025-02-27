@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image and Title Card</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        body {
+            background-color: #212121;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .container .glass {
+            position: relative;
+            width: 180px;
+            height: 200px;
+            background: linear-gradient(#fff2, transparent);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transform: rotate(calc(var(--r) * 1deg));
+            cursor: pointer;
+        }
+
+        .container:hover .glass {
+            transform: rotate(0deg);
+            margin: 0 10px;
+        }
+
+        .container .glass::before {
+            content: attr(data-text);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .container .glass img {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        .container .glass:hover img {
+            transform: scale(1.1);
+        }
+
+        .container .glass:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .container .glass {
+                width: 150px;
+                height: 170px;
+                margin: 10px 0;
+            }
+
+            .container .glass img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container .glass {
+                width: 120px;
+                height: 140px;
+            }
+
+            .container .glass img {
+                width: 100%;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- From Uiverse.io by codebykay101 -->
+    <div class="container">
+        <a href="go:C2" target="_blank">
+            <div data-text="Chat" style="--r:-15;" class="glass">
+                <img src="https://cdn.pixabay.com/animation/2024/06/23/05/08/05-08-33-798_512.gif" alt="Chat">
+            </div>
+        </a>
+        <a href="https://example.com/code" target="_blank">
+            <div data-text="Code" style="--r:5;" class="glass">
+                <img src="https://via.placeholder.com/100" alt="Code Image">
+            </div>
+        </a>
+        <a href="https://example.com/earn" target="_blank">
+            <div data-text="Earn" style="--r:25;" class="glass">
+                <img src="https://via.placeholder.com/100" alt="Earn Image">
+            </div>
+        </a>
+    </div>
+</body>
+</html>
