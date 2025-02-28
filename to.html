@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <style>
         body {
-            background-image: url(https://i.pinimg.com/originals/03/4a/e2/034ae28c150863cd742a9a2dd6efcfb3.gif) ;
+            background-image: url(https://i.pinimg.com/originals/6c/d7/4b/6cd74bae87b2025e3d671a23dbf4b3ca.gif) ;
             font-family: 'Poppins', sans-serif;
             display: flex;
 
@@ -30,17 +30,18 @@
             position: relative;
             width: 180px;
             height: 200px;
-            background: linear-gradient(#fff2, transparent);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.5s;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            transform: rotate(calc(var(--r) * 1deg));
-            cursor: pointer;
+          background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgb(255 0 0);
+    box-shadow: inset 1px 6px 20px 0px rgb(155 2 233 / 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r)* 1deg));
+    cursor: pointer;
+
         }
 
         .container:hover .glass {
@@ -50,18 +51,19 @@
 
         .container .glass::before {
             content: attr(data-text);
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-        }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgb(0 167 45 / 13%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
+       
 
         .container .glass img {
             width: 80px;
@@ -136,15 +138,14 @@
                 <img src="https://media0.giphy.com/media/rdMYuReB3gY54grNo7/source.gif" alt="Tomato">
             </div>
         </a>
+        <a href="go:P1">
+            <div data-text="contest" style="--r:-25;" class="glass">
+                <img src="https://media2.giphy.com/media/rPHuGCwW9uZXwNisWY/giphy.gif" alt="Go contest">
+            </div>
+        </a>
     </div>
     <script >
-        const birthdaySong = new Audio("https://firebasestorage.googleapis.com/v0/b/nopeca-106bd.appspot.com/o/musics%2FTimeless%20(with%20Playboi%20Carti).mp3?alt=media&token=1db79562-6b5e-4587-a4ce-2742e3385c47");
-
-const playSongOnClick = () => {
-  birthdaySong.play();
-};
-
-window.addEventListener('click', playSongOnClick);
+        
     </script>
 </body>
 </html>
